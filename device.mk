@@ -67,8 +67,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8953 \
-    libmm-qcamera \
-    Snap
+    libmm-qcamera
 
 # ConsumerIr
 PRODUCT_PACKAGES += \
@@ -110,3 +109,6 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/7824900.sdhci/by-name/system
 $(call inherit-product, build/target/product/verity.mk)
 
+# GCam Go
+PRODUCT_PACKAGES += \
+    GCam
