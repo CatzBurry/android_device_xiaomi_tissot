@@ -94,9 +94,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
+# Hardware
+PRODUCT_BOARD_PLATFORM := msm8996
+PRODUCT_USES_QCOM_HARDWARE := true
+
+# HALS
+SRC_AUDIO_HAL_DIR := hardware/qcom-caf/$(PRODUCT_BOARD_PLATFORM)/audio
+SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/$(PRODUCT_BOARD_PLATFORM)/display
+SRC_MEDIA_HAL_DIR := hardware/qcom-caf/$(PRODUCT_BOARD_PLATFORM)/media
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    hardware/qcom-caf/msm8996
+$(LOCAL_PATH) \
+hardware/qcom-caf/$(PRODUCT_BOARD_PLATFORM)
 
 
 # Touch HAL
