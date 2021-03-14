@@ -46,4 +46,13 @@
          we only enabled it while the device has ability of mixed color spaces composition -->
     <bool name="config_enableWcgMode">true</bool>
 
+    <!-- Whether to enable doze always on -->
+    <bool name="config_enableDozeAlwaysOn">true</bool>
+
+    <!-- Whether device supports an alt. ambient display -->
+    <bool name="config_alt_ambient_display">true</bool>
+
+    <!-- Dual Statusbar Overlay -->
+    <bool name="config_default_dual_status_bar">false</bool>
+    <integer name="config_default_dual_status_bar_mode">1</integer>
 </resources>

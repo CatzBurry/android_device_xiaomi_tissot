@@ -119,3 +119,7 @@ $(call inherit-product, build/target/product/verity.mk)
 #Zenx Extras
 PRODUCT_PACKAGES += \
     GCamGo
+
+ifeq ($(ZEUS_BUILD_VARIANT),gapps)
+ZEUS_BUILD_VARIANT := GAPPS
+endif
